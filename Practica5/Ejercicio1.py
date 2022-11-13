@@ -8,3 +8,5 @@ while True:
     sleep(5)
     motor.backward()
     sleep(5)
+    motor.stop()
+    sleep(5)
