@@ -6,8 +6,8 @@ TRIG = 23 #Variable que contiene el GPIO al cual conectamos la señal TRIG del s
 ECHO = 24 #Variable que contiene el GPIO al cual conectamos la señal ECHO del sensor
 LED = 16 #Variable que contiene el GPIO al cual conectamos la señal de ALARMA del sensor
 
-GPIO.setmode(GPIO.BCM)     #Establecemos el modo según el cual nos refiriremos a los GPIO de nuestra RPi            
-GPIO.setup(TRIG, GPIO.OUT) #Configuramos el pin TRIG como una salida 
+GPIO.setmode(GPIO.BCM)     #Establecemos el modo según el cual nos refiriremos a los GPIO de nuestra RPi
+GPIO.setup(TRIG, GPIO.OUT) #Configuramos el pin TRIG como una salida
 GPIO.setup(ECHO, GPIO.IN)  #Configuramos el pin ECHO como una salida
 GPIO.setup(LED, GPIO.OUT)  #Configuramos el pin LED como salida
 
@@ -28,16 +28,16 @@ try:
 
         # En este momento el sensor envía 8 pulsos ultrasónicos de 40kHz y coloca su pin ECHO en alto
         # Debemos detectar dicho evento para iniciar la medición del tiempo
-        
+
         while True:
             pulso_inicio = time.time()
             if GPIO.input(ECHO) == GPIO.HIGH:
                 break
 
-        # El pin ECHO se mantendrá en HIGH hasta recibir el eco rebotado por el obstáculo. 
+        # El pin ECHO se mantendrá en HIGH hasta recibir el eco rebotado por el obstáculo.
         # En ese momento el sensor pondrá el pin ECHO en bajo.
 	# Prodedemos a detectar dicho evento para terminar la medición del tiempo
-        
+
         while True:
             pulso_fin = time.time()
             if GPIO.input(ECHO) == GPIO.LOW:
