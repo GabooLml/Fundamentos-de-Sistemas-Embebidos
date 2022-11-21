@@ -4,7 +4,7 @@ import time
 
 TRIG = 23 #Variable que contiene el GPIO al cual conectamos la señal TRIG del sensor
 ECHO = 24 #Variable que contiene el GPIO al cual conectamos la señal ECHO del sensor
-LED = 16 #Variable que contiene el GPIO al cual conectamos la señal de ALARMA del sensor
+LED = 18 #Variable que contiene el GPIO al cual conectamos la señal de ALARMA del sensor
 
 GPIO.setmode(GPIO.BCM)     #Establecemos el modo según el cual nos refiriremos a los GPIO de nuestra RPi
 GPIO.setup(TRIG, GPIO.OUT) #Configuramos el pin TRIG como una salida
