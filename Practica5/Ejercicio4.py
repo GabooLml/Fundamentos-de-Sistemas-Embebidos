@@ -23,7 +23,8 @@ try:
 
         #Ponemos en alto el pin TRIG esperamos 10 uS antes de ponerlo en bajo
         GPIO.output(TRIG, GPIO.HIGH)
-        time.sleep(0.00001)
+        #time.sleep(0.00001)
+        time.sleep(5)
         GPIO.output(TRIG, GPIO.LOW)
 
         # En este momento el sensor envía 8 pulsos ultrasónicos de 40kHz y coloca su pin ECHO en alto
@@ -50,7 +51,7 @@ try:
         distancia = (34300 * duracion) / 2
 
         #Alarma encendiendo un led si la distancia es menor a un metro
-        if distancia < 100.00:
+        if distancia < 10.10:
             GPIO.output(LED, GPIO.HIGH)
             # Imprimimos resultado
             print( "Distancia: %.2f cm" % distancia)
