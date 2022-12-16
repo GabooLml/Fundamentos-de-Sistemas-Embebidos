@@ -1,10 +1,11 @@
 # Importamos la paquteria necesaria
 import RPi.GPIO as GPIO
 import time
+import os
 
 TRIG = 23 #Variable que contiene el GPIO al cual conectamos la señal TRIG del sensor
 ECHO = 24 #Variable que contiene el GPIO al cual conectamos la señal ECHO del sensor
-LED = 16 #Variable que contiene el GPIO al cual conectamos la señal LED
+LED = 17 #Variable que contiene el GPIO al cual conectamos la señal LED
 
 GPIO.setmode(GPIO.BCM)     #Establecemos el modo según el cual nos refiriremos a los GPIO de nuestra RPi
 GPIO.setup(TRIG, GPIO.OUT) #Configuramos el pin TRIG como una salida
@@ -48,11 +49,14 @@ try:
         #Obtenemos la distancia considerando que la señal recorre dos veces la distancia a medir y que la velocidad del sonido es 343m/s
         distancia = (34300 * duracion) / 2
 
-        if distancia < 100.00:
+        if distancia < 30.00:
             # Se enciende el LED como alarma
             GPIO.output(LED, GPIO.HIGH)
             # Imprimimos resultado
             print( "Distancia: %.2f cm" % distancia)
+            #Se manda la alerta
+            os.system('sudo sh /home/Gaboo/Proyecto/Scripts/Alerta.sh')
+            time.sleep(15)
         else:
             # Se apaga el LED de la alarma
             GPIO.output(LED, GPIO.LOW)

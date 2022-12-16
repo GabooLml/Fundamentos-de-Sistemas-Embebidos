@@ -18,45 +18,72 @@ def off_rgb():
     red.value = 0
     green.value = 0
     blue.value = 0
+    red1.value = 0
+    green1.value = 0
+    blue1.value = 0
 
 def set_red():
     red.value = 1
     green.value = 0
     blue.value = 0
+    red1.value = 1
+    green1.value = 0
+    blue1.value = 0
 
 def set_green():
     red.value = 0
     green.value = 1
     blue.value = 0
+    red1.value = 0
+    green1.value = 1
+    blue1.value = 0
 
 def set_blue():
     red.value = 0
     green.value = 0
     blue.value = 1
+    red1.value = 0
+    green1.value = 0
+    blue1.value = 1
 
 def set_magenta():
     red.value = 1
     green.value = 0
     blue.value = 1
+    red1.value = 1
+    green1.value = 0
+    blue1.value = 1
 
 def set_cyan():
     red.value = 0
     green.value = 1
     blue.value = 1
+    red1.value = 0
+    green1.value = 1
+    blue1.value = 1
 
 def set_yellow():
     red.value = 1
     green.value = 1
     blue.value = 0
+    red1.value = 1
+    green1.value = 1
+    blue1.value = 0
 
 def set_white():
     red.value = 1
     green.value = 1
     blue.value = 1
+    red1.value = 1
+    green1.value = 1
+    blue1.value = 1
 
-red = LED(13)
-green = LED(19)
-blue = LED(26)
+red = LED(27)
+green = LED(22)
+blue = LED(10)
+red1 = LED(11)
+green1 = LED(25)
+blue1 = LED(9)
 
 #bd[0,0].when_pressed = set_red
 #bd[0,2].when_moved = set_green

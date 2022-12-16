@@ -1,12 +1,11 @@
 from gpiozero import Motor
-from time import sleep
+from time import  sleep
 
-motor = Motor(forward = 14, backward = 4)
+motor = Motor(forward=14, backward=15)
 
-while True:
+def encender():
     motor.forward()
-    sleep(5)
-    motor.backward()
-    sleep(5)
+    
+def apagar():
     motor.stop()
-    sleep(5)
+    
