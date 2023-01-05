@@ -7,6 +7,9 @@ En este repositorio se hayan todos los ejercicios realizados en la elaboración 
 - **Rojas Méndez Gabriel**
 - **Santiago Edwin**
 
+##### Implementación
+- **[Dreams Room - Proyecto Final - Fundamentos de Sistemas Embebidos](https://www.youtube.com/watch?v=w5POK_2NuFg)**
+
 ##### Sitios de referencia
 - **[BlueDot](https://github.com/martinohanlon/BlueDot)**
 - **[330ohms](https://blog.330ohms.com/category/raspberry-pi/tutoriales-raspberrypi/)**
